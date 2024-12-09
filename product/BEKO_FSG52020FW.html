@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEKO FSG52020FW - Детальний опис</title>
+    <link rel="stylesheet" href="../styles_product.css">
+    <style>
+        .more-text {
+            display: none; /* Спочатку прихований текст */
+        }
+        .read-more {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Детальний опис</h1>
+        <nav>
+            <a href="../index.html">Головна</a>
+            <a href="../categories.html">Категорії</a>
+            <a href="../cart.html">Кошик</a>
+            <a href="../contacts.html">Контакти</a>
+        </nav>
+    </header>
+    <main>
+        <div class="product-details">
+            <div class="main-image">
+                <img src="../images/BEKO_FSG52020FW/BEKO_FSG52020FW_1.jpg" alt="Пральна машина BEKO FSG52020FW">
+            </div>
+            <div class="product-info">
+                <h2>Кухонна плита BEKO FSG52020FW</h2>
+                <p><strong>Ціна:</strong> 10 000 грн</p>
+                <button class="add-to-cart" data-product-id="BEKO_FSG52020FW">Додати в кошик</button>
+                <h2>Опис</h2>
+                <p>
+                    Кухонна плита BEKO FSG52020FW ...
+                </p>
+            </div>
+        </div>
+        <div class="product-description">
+            <h3>Опис</h3>
+            <p>
+                Кухонна плита BEKO FSG52020FW...
+            </p>
+            <h3>Характеристики</h3>
+            <ul>
+                <li>Максимальне завантаження: 7 кг</li>
+                <li>Клас енергоефективності: A+++</li>
+                <li>Швидкість віджиму: 1200 об/хв</li>
+                <li>Тип завантаження: фронтальне</li>
+            </ul>
+            <h3>Ідеальне прання будь-якої тканини з 6 Motion</h3>
+            <p>
+                Технологія 6 Motion — це шість різних схем руху барабана, які забезпечують максимально делікатне та ефективне прання. 
+                <span class="read-more" onclick="toggleText()">(...Читати далі)</span>
+                <span class="more-text">
+                    Складні забруднення видаляються без слідів, а одяг не пошкоджується. Додаткові пояснення про технологію 6 Motion: кожен рух барабана виконується в залежності від типу тканини та рівня забруднення, що дозволяє досягати максимально ефективного результату без шкоди для речей.
+                </span>
+            </p>
+        </div>
+        <div class="product-gallery">
+            <h3>Додаткові фото</h3>
+            <div class="gallery-images">
+                <img src="../images/BEKO_FSG52020FW/BEKO_FSG52020FW_2.jpg" alt="LG F2J3HS0W фото 1">
+                <img src="../images/BEKO_FSG52020FW/BEKO_FSG52020FW_3.jpg" alt="LG F2J3HS0W фото 2">
+                <img src="../images/BEKO_FSG52020FW/BEKO_FSG52020FW_4.jpg" alt="LG F2J3HS0W фото 3">
+                <img src="../images/BEKO_FSG52020FW/BEKO_FSG52020FW_5.jpg" alt="LG F2J3HS0W фото 4">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Телефон: +380 67 123 4567</p>
+        <p>Email: info@tehmag.com</p>
+        <p>Контакти: Магазин побутової техніки, м. Чугуїв, вул. Харківська, 127</p>
+        <p>© 2024 Магазин побутової техніки. Усі права захищені.</p>
+    </footer>
+    <script>
+        // Функція для перемикання видимості тексту
+        function toggleText() {
+            var moreText = document.querySelector('.more-text');
+            var readMore = document.querySelector('.read-more');
+            
+            // Відображаємо прихований текст
+            moreText.style.display = "inline";
+            
+            // Приховуємо кнопку "Читати далі"
+            readMore.style.display = "none";
+        }
+    </script>
+    <script src="../scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - Магазин побутової техніки</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h2 { text-align: center; }
+        .branches-container { display: flex; gap: 20px; margin: 20px 0; }
+        .branches-list { width: 30%; border: 1px solid #ddd; padding: 20px; background: #f9f9f9; }
+        .branches-list ul { list-style: none; padding: 0; }
+        .branches-list li { cursor: pointer; padding: 10px; border-bottom: 1px solid #ddd; }
+        .branch-details { flex-grow: 1; border: 1px solid #ddd; padding: 20px; background: #f9f9f9; }
+        .map-container { margin-top: 20px; }
+
+        .branch-item {
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.branch-item:hover {
+    background-color: #f0f0f0;
+}
+
+.branch-item.active-branch {
+    background-color: #74cc73; /* Зелений колір для активного філіалу */
+    color: white;
+    font-weight: bold;
+    border: 1px solid #5ea960;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Магазин побутової техніки</h1>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="categories.html">Категорії товарів</a>
+            <a href="cart.html">Кошик</a>
+            <a href="contacts.html" class="active">Контакти</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Наші філіали</h2>
+        <div class="branches-container">
+            <div class="branches-list">
+                <ul id="branches">
+                    <li>Завантаження...</li>
+                </ul>
+            </div>
+            <div class="branch-details" id="branch-details">
+                <p>Оберіть філіал, щоб побачити інформацію.</p>
+            </div>
+        </div>
+        <h2>Розташування на карті</h2>
+        <div class="map-container">
+            <div id="map" style="width: 100%; height: 450px;"></div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Магазин побутової техніки. Усі права захищені.</p>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8h9q-FSsyYIonY569_xLst7uLnxLRR5I"></script>
+    <script src="contact_scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ваш кошик</h1>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="categories.html">Категорії</a>
+        </nav>
+    </header>
+    <main>
+        <div class="cart-items">
+            <div id="cart-items">
+                <!-- Товари з кошика відображаються тут -->
+            </div>
+        </div>
+        <p id="total-price">Загальна сума: 0 UAH</p>
+        <div class="cart-actions">
+            <button id="compare-button" class="action-button">Порівняти</button>
+        </div>
+        <form id="compare-form" style="display: none;">
+            <h2>Оберіть товари для порівняння:</h2>
+            <div id="checkbox-container"></div>
+            <button type="button" id="execute-comparison" class="action-button">Виконати порівняння</button>
+        </form>
+        <div id="compare-section" style="display: none;">
+            <h2>Порівняння товарів</h2>
+            <div id="comparison-container" class="comparison-container">
+                <div id="left-item" class="comparison-item"></div>
+                <div id="right-item" class="comparison-item"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Телефон: +380 67 123 4567</p>
+        <p>Email: info@tehmag.com</p>
+        <p>Контакти: Магазин побутової техніки, м. Чугуїв, вул. Харківська, 127</p>
+        <p>© 2024 Магазин побутової техніки. Усі права захищені.</p>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>

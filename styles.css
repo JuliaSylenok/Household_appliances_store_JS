@@ -1,0 +1,619 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+h4 {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #4CAF50;
+}
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.products, .categories, .cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product, .product-details {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.new-badge {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 2px;
+    border-radius: 4px;
+    margin-left: 1px;
+    position: relative;
+    top: -10px;
+}
+
+.product {
+    border: 1px solid #ccc; /* Границя навколо картки */
+    padding: 10px; /* Відступ всередині картки */
+    width: 300px; /* Фіксована ширина картки */
+    text-align: center; /* Вирівнювання тексту та кнопок */
+    margin: 10px; /* Відступ між картками */
+}
+
+.product img {
+    max-width: 100%; /* Зображення не виходить за межі div */
+    height: auto; /* Зберігає пропорції зображення */
+    display: block; /* Вирівнює зображення всередині картки */
+    margin: 0 auto; /* Центрує зображення */
+}
+.products {
+    display: flex; /* Розташування товарів у ряд */
+    flex-wrap: wrap; /* Перенос на наступний ряд для екранів менше ширини */
+    gap: 20px; /* Відстань між картками */
+    justify-content: center; /* Центрування карток у контейнері */
+}
+/*category.html*/
+
+.categories {
+    display: flex;
+    justify-content: space-around; /* Розміщення елементів з рівномірними відступами */
+    flex-wrap: wrap; /* Перенос елементів на новий рядок при зменшенні ширини */
+    gap: 20px;
+}
+
+.category {
+    text-align: center;
+    width: 200px;
+}
+
+.category img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Закруглення кутів */
+    margin-bottom: 10px;
+}
+
+.category h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/*products*/
+
+/* Основна інформація на всю ширину */
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1200px;
+    width: 100%;
+}
+.main-image {
+    width: 80%; /* Встановлюємо ширину 80% від батьківського контейнера */
+    max-width: 400px; /* Максимальна ширина зображення */
+    height: auto; /* Автоматична висота для збереження пропорцій */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+
+.product-info {
+    text-align: left;
+    width: 100%;
+    padding: 20px;
+}
+
+.product-info h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.product-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-info li {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Галерея зображень */
+.product-gallery {
+    margin: 40px auto;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 48%; /* Два фото в ряд */
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*cart.html*/
+
+/* Стиль для кожного товару в кошику */
+.cart-items {
+    border: 1px solid #ccc; /* Легка сіра рамка */
+    border-radius: 8px; /* Закруглені кути */
+    padding: 15px; /* Внутрішні відступи */
+    margin-bottom: 20px; /* Відступ між товарами */
+    display: flex; /* Вирівнювання вмісту горизонтально */
+    align-items: center; /* Вирівнювання елементів по центру */
+    background-color: #f9f9f9; /* Легка підкладка */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь для об’єму */
+}
+
+.comparison-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.comparison-item {
+    width: 45%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-actions {
+    margin-top: 20px;
+}
+.delete-item {
+    background-color: #ff4d4d; /* Червоний фон */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-item:hover {
+    background-color: #cc0000; /* Темніший червоний */
+}
+#compare-button {
+    background-color: #4CAF50; /* Зелений фон */
+    color: white; /* Білий текст */
+    border: none; /* Без рамки */
+    padding: 10px 20px; /* Відступи */
+    font-size: 16px; /* Розмір тексту */
+    font-weight: bold; /* Жирний текст */
+    border-radius: 8px; /* Закруглені кути */
+    cursor: pointer; /* Зміна курсора */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавний ефект */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь */
+    margin-top: 20px; /* Відступ зверху */
+}
+
+#compare-button:hover {
+    background-color: #45a049; /* Темніший зелений при наведенні */
+    transform: scale(1.05); /* Легке збільшення */
+}
+
+#compare-button:active {
+    background-color: #3d8b41; /* Ще темніший зелений при натисканні */
+    transform: scale(1); /* Зменшення до стандартного розміру */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Менша тінь */
+}
+/* Загальний стиль для кнопок дій */
+.action-button {
+    background-color: #4CAF50; /* Зелений фон */
+    color: white; /* Білий текст */
+    border: none; /* Без рамки */
+    padding: 10px 20px; /* Відступи */
+    font-size: 16px; /* Розмір тексту */
+    font-weight: bold; /* Жирний текст */
+    border-radius: 8px; /* Закруглені кути */
+    cursor: pointer; /* Зміна курсора */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавний ефект */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь */
+    margin-top: 20px; /* Відступ зверху */
+}
+
+.action-button:hover {
+    background-color: #45a049; /* Темніший зелений при наведенні */
+    transform: scale(1.05); /* Легке збільшення */
+}
+
+.action-button:active {
+    background-color: #3d8b41; /* Ще темніший зелений при натисканні */
+    transform: scale(1); /* Зменшення до стандартного розміру */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Менша тінь */
+}
+
+
+/* Таблиця порівняння */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4CAF50; /* Зелений колір для заголовків */
+    color: white;
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Світло-сірий фон для парних рядків */
+}
+
+table tr:hover {
+    background-color: #e9e9e9; /* Світліший сірий фон при наведенні */
+}
+
+table td {
+    vertical-align: top; /* Вирівнювання тексту зверху */
+}
+
+table thead {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/*category.html*/
+
+.categories {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.category {
+    width: 300px; /* Ширина контейнера */
+    height: 350px; /* Висота контейнера */
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.category:hover {
+    transform: scale(1.05); /* Легка анімація при наведенні */
+}
+
+.category img {
+    width: 60%; /* Картинка займатиме всю ширину контейнера */
+    height: 80%; /* Висота картинки в межах контейнера */
+    object-fit: contain; /* Вписувати картинку в контейнер, зберігаючи пропорції */
+    border-bottom: 1px solid #ddd; /* Розділ між зображенням і текстом */
+}
+
+.category h3 {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333333;
+}
+
+
+
+/*index.html*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #397950;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Меню */
+.menu-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu > li {
+    margin-bottom: 20px; /* Збільшений відступ між основними пунктами меню */
+}
+
+.menu > li > a {
+    font-weight: bold;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.menu ul {
+    list-style-type: circle;
+    padding-left: 20px;
+    margin-top: 10px; /* Відступ між категоріями та підменю */
+}
+
+.menu ul li {
+    margin-bottom: 10px; /* Відступ між підпунктами */
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: #333;
+}
+
+.menu ul a:hover {
+    color: #4CAF50;
+}
+
+
+/* Стиль для кнопок навігації слайдера */
+.slider-controls {
+    text-align: left;
+    margin: 10px 0;
+    display: flex;
+    gap: 5px;
+}
+
+.slider-control {
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider-control.active {
+    background-color: #4CAF50; /* Колір активного слайда */
+}
+
+.slider-control:hover {
+    background-color: #4CAF50;
+}
+
+/* Інші стилі слайдера */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+    min-width: 100%;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.slider-item.active {
+    opacity: 1;
+}
+
+.slider-item img {
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+/* Блок для секції "Рекомендовані товари" */
+.recommended-section {
+    border: 2px solid #4CAF50; /* Зелена рамка */
+    border-radius: 8px; /* Закруглені кути */
+    padding: 20px; /* Внутрішній відступ */
+    margin: 20px auto; /* Відступ з боків */
+    max-width: 800px; /* Максимальна ширина секції */
+    background-color: #f9f9f9; /* Легкий фон */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для об’єму */
+}
+
+/* Центрування заголовка */
+.center-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+
+/* Центрування заголовка */
+.center-title {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+}
+
+/* Продукти */
+.products {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+/* Футер */
+footer {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*contacts.html*/
+
+/* Контактна інформація */
+.contact-info {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+/* Карта */
+.map-container {
+    margin: 20px auto;
+    max-width: 800px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Скидання стилів для посилань */
+a {
+    text-decoration: none; /* Прибрати підкреслення */
+    color: inherit; /* Використовувати колір тексту */
+}
+a:hover, a:focus {
+    color: inherit; /* Не змінювати колір при наведенні чи фокусі */
+}
+
+.image-container_f {
+    width: 100%; /* Контейнер займає всю ширину продукту */
+    height: 400px; /* Встановіть бажану висоту */
+    overflow: hidden; /* Прибирає частини, що виходять за межі контейнера */
+    display: flex; /* Центрує зображення */
+    justify-content: center; /* Горизонтальне центрування */
+    align-items: center; /* Вертикальне центрування */
+    border-radius: 8px; /* Закруглені кути */
+}
+
+.image-container_f img {
+    width: auto; /* Автоматична ширина */
+    height: 100%; /* Висота зображення дорівнює висоті контейнера */
+    object-fit: cover; /* Обрізає зображення, щоб воно заповнило контейнер */
+}
+
+.image-container_k {
+    width: 100%; /* Контейнер займає всю ширину продукту */
+    height: 300px; /* Встановіть бажану висоту */
+    overflow: hidden; /* Прибирає частини, що виходять за межі контейнера */
+    display: flex; /* Центрує зображення */
+    justify-content: center; /* Горизонтальне центрування */
+    align-items: center; /* Вертикальне центрування */
+    border-radius: 8px; /* Закруглені кути */
+}
+
+.image-container_k img {
+    width: auto; /* Автоматична ширина */
+    height: 100%; /* Висота зображення дорівнює висоті контейнера */
+    object-fit: cover; /* Обрізає зображення, щоб воно заповнило контейнер */
+}

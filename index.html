@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна - Магазин побутової техніки</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Магазин побутової техніки</h1>
+    </header>
+    <main>
+        <!-- Список меню -->
+        <div class="menu-container">
+            <h2>Меню</h2>
+            <ul class="menu">
+                <li><a href="categories.html">1. Категорії товарів</a>
+                    <ul>
+                        <li>
+                            <a href="category/washing_machines.html">Пральні машини</a>
+                            <span class="new-badge">NEW</span>
+                        </li>
+                        <li><a href="category/fridges.html">Холодильники</a></li>
+                        <li><a href="category/kitchen_machines.html">Кухонні плити</a></li>
+                    </ul>
+                </li>
+                <li><a href="cart.html">2. Кошик</a></li>
+                <li><a href="contacts.html">3. Контакти</a></li>
+            </ul>
+        </div>
+
+        <!-- Рекомендовані товари -->
+        <div class="recommended-section">
+            <h2 class="center-title">Рекомендовані товари</h2>
+            <div class="slider-controls">
+                <!-- Кнопки для слайдера -->
+                <button class="slider-control" data-slide="0"></button>
+                <button class="slider-control" data-slide="1"></button>
+                <button class="slider-control" data-slide="2"></button>
+            </div>
+            <div class="slider-container">
+                <button class="slider-btn left-btn">&#8249;</button>
+                <div class="slider">
+                    <div class="slider-item">
+                        <div class = "image-container_f">
+                        <img src="images/images_1/LG_F2J3HS0W.jpg" alt="Пральна машина">
+                    </div>
+                        <h3>Пральна машина LG_F2J3HS0W</h3>
+                        <p>Ціна: 10 000 грн</p>
+                        <a href="product/LG_F2J3HS0W.html"><h4>Детальніше</h4></a>
+                    </div>
+                    <div class="slider-item">
+                        <div class = "image-container_f">
+                        <img src="images/BOSCH_KGN39UL316/BOSCH_KGN39UL316_1.jpg" alt="Холодильник">
+                    </div>
+                        <h3>Холодильник BOSCH KGN39UL316</h3>
+                        <p>Ціна: 15 000 грн</p>
+                        <a href="product/BOSCH_KGN39UL316.html"><h4>Детальніше</h4></a>
+                    </div>
+                    <div class="slider-item">
+                        <div class = "image-container_f">
+                        <img src="images/BEKO_FSG52020FW/BEKO_FSG52020FW_1.jpg" alt="Кухонна плита">
+                    </div>
+                        <h3>Кухонна плита Bosch DEF</h3>
+                        <p>Ціна: 8 000 грн</p>
+                        <a href="product/BEKO_FSG52020FW.html"><h4>Детальніше</h4></a>
+                    </div>
+                </div>
+                <button class="slider-btn right-btn">&#8250;</button>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <p>Телефон: +380 67 123 4567</p>
+        <p>Email: info@tehmag.com</p>
+        <p>Контакти: Магазин побутової техніки, м. Чугуїв, вул. Харківська, 127</p>
+        <p>© 2024 Магазин побутової техніки. Усі права захищені.</p>
+    </footer>
+    <script src="slider.js"></script>
+</body>
+</html>
